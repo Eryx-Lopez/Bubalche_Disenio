@@ -1,0 +1,96 @@
+
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    
+}
+.icon{
+    font-size: 35px;
+}
+
+.icon:hover{
+    color: #BDCC99;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.logo-img {
+    height: 40px; 
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+.logo-img-small {
+    height: 30px; 
+}
+  
+.search-bar input {
+    padding: 8px;
+    border: 1px solid rgb(128, 128, 0, 0.38);
+    color: #fff;
+    border-radius: 20px;
+    width: 600px; /* Adjust the width of the search bar */
+    background-color: #BDCC99;
+}
+
+.search-bar input:hover{
+    background-color: rgba(189, 204, 153, 0.6);
+    transition: 0.5s;
+}
+  
+.upper-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    background-color: #BDCC99;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
+
+.nav li{
+   list-style: none;
+   width: 40%;
+   position: relative; 
+
+}
+
+.nav a:hover{
+    cursor: pointer;
+}
+
+.nav li:hover{
+    font-weight: bold;
+
+}
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav li:hover::after { /* after contenido decorativo */
+    content: ""; /* Necesario para q la línea exista */
+    position: absolute;
+    left: 20%; /* Centrar la línea */
+    bottom: -6px; /* decir que este abajo por 16px */
+    width: 60%; 
+    height: 4px; /* Grosor de la línea */
+    background-color: rgb(128, 128, 0, 0.38); 
+    transition: width 0.8s ease; /*La animación */
+}
+
