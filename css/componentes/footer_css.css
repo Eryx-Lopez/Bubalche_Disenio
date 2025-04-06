@@ -17,12 +17,26 @@
     align-items: flex-start;
     padding: 0;
     margin-left: 80px;
+    margin-right: 4px;
+}
+
+.footer-left{
+    width: 10%;
 }
 
 .footer-left a {
     text-decoration: none;
     color: #fff; 
 }
+
+.footer-left li{
+    margin: 15px 0;
+}
+
+.footer-left li:hover{
+    font-weight: bold;
+}
+
 
 .footer-contact {
     width: 40%;
@@ -31,21 +45,23 @@
 .footer-title{
     font-size: 20px;
     color: #fff;
-    margin: 0;
-
+    margin: 20px 0;
+    width: 50%;
 }
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
 }
 
 .contact-form textarea {
     resize: none;
-    height: 80px;
+    height: 100px;
     border: 1px solid #bdcc99;
     border-radius: 10px;
     padding: 10px;
+
 }
 
 .contact-form input,
@@ -55,10 +71,19 @@
     padding: 10px;
 }
 
+.contact-form input, textarea{
+    color: #4a784a;
+}
+
 .contact-form button {
     background-color: #4a784a;
     color: white;
     cursor: pointer;
+}
+
+.contact-form button:hover{
+    background-color: #e0cc9f;
+    font-weight: bold;
 }
 
 .footer-logo {
