@@ -7,7 +7,12 @@
     <link rel="stylesheet" href="../css/componentes/card_css.css">
     <link rel="stylesheet" href="../css/componentes/footer_css.css">
     <link rel="stylesheet" href="../css/index_css.css">
-
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
 
     <!-- link to icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
@@ -32,9 +37,9 @@
                     <i class="iconoir-simple-cart icon"></i>
                 </div>
                
-
+                <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
             </div>
-            <div class="lower-nav">
+            <div class="lower-nav menu">
                 <nav class="nav">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="organizaciones.html">Organizaciones</a></li>
