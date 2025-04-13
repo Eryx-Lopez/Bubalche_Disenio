@@ -107,3 +107,15 @@ body {
     background-color: #808000;
     font-weight: bold;
 }
+
+.video-section{
+    margin: 70px;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 24px 0;
+}
