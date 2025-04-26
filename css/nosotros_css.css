@@ -5,3 +5,7 @@ body {
     background-color: #fcfcef;
     font-family: "Istok Web", sans-serif;
 }
+#usoRedesCanvas {
+    width: 800px !important;
+    height: 600px !important; 
+}
