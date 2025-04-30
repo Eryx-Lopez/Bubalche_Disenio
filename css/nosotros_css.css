@@ -5,7 +5,28 @@ body {
     background-color: #fcfcef;
     font-family: "Istok Web", sans-serif;
 }
-#usoRedesCanvas {
-    width: 800px !important;
-    height: 600px !important; 
+.subtitle{
+    font-size: 2em;
+    color: #808000;
+    margin: 0;
 }
+
+.section{
+    margin: 35px 70px;
+}
+.text{
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+.graph-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#usoRedesCanvas {
+    width: 700px !important;
+    height: 500px !important; 
+}
+

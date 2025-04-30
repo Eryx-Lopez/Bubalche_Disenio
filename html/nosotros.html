@@ -6,14 +6,29 @@
     <link rel="stylesheet" href="../css/componentes/navbar_css.css">
     <link rel="stylesheet" href="../css/componentes/footer_css.css">
     <link rel="stylesheet" href="../css/nosotros_css.css">
+    <!--Gráidcas-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
- <!-- link to icons -->
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+    <!--Maps-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp4C1KH0EYIPOxSWN5Wb4Twtf9xX7-jPs"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
  
     <title>Nosotros</title>
+<script>
+    function initMap() {
+        var ubicacion = {lat: 20.735124, lng: -103.371997}; // Coordenadas de Zapopan, Jalisco
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: ubicacion
+        });
+        var marker = new google.maps.Marker({
+            position: ubicacion,
+            map: map
+        });
+    }
+</script>
 </head>
-<body>
+<body onload="initMap()">
     <header>
         <div class="navbar">
             <div class="upper-nav">
@@ -41,9 +56,25 @@
             </div>
         </div>
     </header>
-    <h1>Nosotros</h1>
+    <section class ="section">
+        <h1 class="subtitle">Redes sociales</h1>
+        <p class="text">Encuesta realizada para saber las redes sociales más utilizadas por nuestros clientes</p>
+        <div class="graph-container">
+            <canvas id="usoRedesCanvas" width="800" height="600"></canvas>
+        </div>
+    </section>
+    <section class ="section">
+        <h1 class="subtitle">Nosotros</h1>
+        <div class="graph-container">
+            <div id="map" style="width: 800px; height: 500px;"></div>
+        </div>
+        
 
-    <canvas id="usoRedesCanvas" width="800" height="600"></canvas>
+    </section>
+    
+
+    
+
     <footer class="footer">
         <div class="footer-left">
             <ul>
@@ -96,12 +127,8 @@
             indexAxis: 'y', // Me da las graficas en horizontal (cambia de eje)
             responsive: true,
             plugins: {
-                title: {
-                    display: true,
-                    text: 'Preferencia en Redes Sociales',
-                    font: {
-                        size: 52 
-                    }
+                legend:{
+                    display:false
                 }
             },
             scales: {
@@ -115,7 +142,7 @@
                     ticks: {
                         font: {
                             weight: 'bold', // Negritas también para las etiquetas del eje Y
-                            size: 32
+                            size: 18
                         }
                     }
                 }
@@ -123,3 +150,4 @@
         }
     });
 </script>
+   
